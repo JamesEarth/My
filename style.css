@@ -1,78 +1,17 @@
-/* Base Layout Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Error: Expected newline.
+ *   ,
+ * 7 | body {
+ *   |      ^
+ *   '
+ *   st.sass 7:6  root stylesheet */
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
-  color: #333;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-header,
-footer {
-  background-color: #2c3e50;
-  color: #ffffff;
-  text-align: center;
-  padding: 1.5rem;
-}
-
-main {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-}
-
-/* Card Styling */
-.card {
-  background: #ffffff;
-  padding: 2.5rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  max-width: 400px;
-  width: 100%;
-}
-
-h2 {
-  margin-bottom: 1rem;
-  color: #2c3e50;
-}
-
-p {
-  margin-bottom: 1.5rem;
-  line-height: 1.5;
-}
-
-button {
-  background-color: #3498db;
-  color: white;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-button:hover {
-  background-color: #2980b9;
-}
-
-/* Utility Class */
-.hidden {
-  display: none;
-}
-
-#message {
-  margin-top: 1.5rem;
-  font-weight: bold;
-  color: #27ae60;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Expected newline.\a   \2577 \a 7 \2502  body {\a   \2502       ^\a   \2575 \a   st.sass 7:6  root stylesheet";
 }
